@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Timer</title>
+    <style>
+        body {
+            background: #121212;
+            color: #fff;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .timer {
+            font-size: 4rem;
+            background: #1e1e1e;
+            padding: 30px 60px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="timer" id="timer">00:00:00</div>
+
+    <script>
+        let seconds = 0;
+
+        function formatTime(num) {
+            return num.toString().padStart(2, '0');
+        }
+
+        function updateTimer() {
+            seconds++;
+            const hrs = Math.floor(seconds / 3600);
+            const mins = Math.floor((seconds % 3600) / 60);
+            const secs = seconds % 60;
+
+            document.getElementById('timer').textContent =
+                `${formatTime(hrs)}:${formatTime(mins)}:${formatTime(secs)}`;
+        }
+
+        // Start the timer
+        setInterval(updateTimer, 1000);
+    </script>
+
+</body>
+
+</html>

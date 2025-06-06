@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Smiley Face</title>
+    <style>
+        body {
+            background-color: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .smiley {
+            width: 250px;
+            height: 250px;
+            background-color: #ffeb3b;
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .eye {
+            width: 30px;
+            height: 30px;
+            background-color: #000;
+            border-radius: 50%;
+            position: absolute;
+            top: 70px;
+        }
+        
+        .eye.left {
+            left: 60px;
+        }
+        
+        .eye.right {
+            right: 60px;
+        }
+        
+        .smile {
+            width: 140px;
+            height: 70px;
+            border-bottom: 8px solid #000;
+            border-radius: 0 0 70px 70px;
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="smiley">
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+        <div class="smile"></div>
+    </div>
+
+</body>
+
+</html>
